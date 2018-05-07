@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="styles/css/reset.css" rel="stylesheet">
+    <link href="styles/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="styles/css/style.css" rel="stylesheet">
+    <title>Interior</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="header__bg">
+                <div class="header__bg1">
+                    <div class="layout"></div>
+                </div>
+                <div class="header__bg2">
+                    <div class="layout"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header-top">
+                    <div class="header-top__left">
+                        <div class="header-top__menuIcon">
+                            <i class="ion-navicon"></i>
+                        </div>
+                        <div class="header-top__menu">{{ this.content().menu }}</div>
+                    </div>
+                    <div class="header-top__center">
+                        <div class="header-top__logo">w<span><hr>oo</span>der</div>
+                        <div class="header-top__nav">
+                            <div class="header-top__home">{{ this.content().home }}</div>
+                            <div class="header-top__products">{{ this.content().products }}</div>
+                            <div class="header-top__about">{{ this.content().about }}</div>
+                        </div>
+                    </div>
+                    <div class="header-top__right">
+                        <i class="ion-ios-information-outline header-info"></i>
+                        <div class="header-top__language">en
+                            <i class="ion-android-arrow-dropdown"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="header-content">
+                        <div class="header-content__left">
+                            <div class="header-content__undertitle">wooder</div>
+                        </div>
+                        <div class="header-content__center">
+                            <div class="header-content__title">wooder</div>
+                            <div class="header-content__btn" @mouseover="btnAni()" @mouseleave="btnAni()">{{ this.content().learn }}
+                                <svg id="learnmoreBtn"></svg>
+                                <i class="ion-ios-arrow-thin-right learn"></i>
+                            </div>
+                        </div>
+                        <div class="header-content__right">
+                            <div class="header-content__floatingtext">furniture & decor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="furniture">
+            <div class="container">
+                <div class="furniture-content">
+                    <div class="furniture__title">{{ this.content().furniture }}
+                        <hr class="content__line">
+                    </div>
+                    <div class="furniture__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt explicabo necessitatibus nisi optio rem, rerum ullam vitae voluptate?
+                        <hr class="content__preline">
+                    </div>
+                    <div class="furniture__btn">{{ this.content().learn }}
+                        <i class="ion-ios-arrow-thin-right"></i>
+                        <hr class="furniture__underline">
+                    </div>
+                </div>
+                <div class="furniture__photo">
+                    <div class="furniture__layout"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+
+</html>
