@@ -42,6 +42,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="container">
                     <div class="header-content">
                         <div class="header-content__left">
                             <div class="header-content__undertitle">wooder</div>
@@ -57,7 +58,8 @@
                             <div class="header-content__floatingtext">furniture & decor</div>
                         </div>
                     </div>
-            	</div>
+                </div>
+            </div>
 
         </header>
         <div class="furniture">
@@ -74,8 +76,95 @@
                         <hr class="furniture__underline">
                     </div>
                 </div>
-                <div class="furniture__photo">
+                <div class="furniture__photo" :style='{ backgroundImage: `url(${this.images.furniture})` }'>
                     <div class="furniture__layout"></div>
+                    <div class="furniture__floatingtext">{{ this.content().furniture }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="decor">
+            <div class="container">
+                <div class="decor__photo" :style='{ backgroundImage: `url(${this.images.decor})`}'>
+                    <div class="decor__layout"></div>
+                    <div class="decor__floatingtext">{{ this.content().decor }}</div>
+                </div>
+                <div class="decor__letter">d</div>
+                <div class="decor-content">
+                    <div class="decor__title">{{ this.content().decor }}
+                        <hr class="decor__line">
+                    </div>
+                    <div class="decor__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore excepturi minima mollitia
+                        <hr class="decor__preline">
+                    </div>
+                    <div class="decor__btn">{{ this.content().learn }}
+                        <i class="ion-ios-arrow-thin-right"></i>
+                        <hr class="decor__underline">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quality">
+            <div class="container">
+                <div class="quality__title">wooder — is a quality</div>
+                <hr class="quality__line">
+                <div class="quality__text">
+                    Cupiditate delectus eos hic ipsa, iusto magni minus officia rerum sequi sunt! <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="quality__items">
+                    <div class="quality-item" v-for="vid in this.content().vids">
+                        <div class="quality__imgwrapper">
+                            <div class="quality-item__img" :style="{ background: `url(${vid.image}) bottom no-repeat` }">
+                                <span class="quality-item__play">
+                                    <i class="ion-play"></i>
+                                </span>
+                            </div>
+
+                        </div>
+                        <hr class="quality-item__line">
+                        <div class="quality-item__description">{{ vid.desc }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="video__layout"></div>
+            <div class="video__content">
+                <hr class="video__rightline">
+                <span class="video__play big">
+                        <i class="ion-play big"></i>
+                </span>
+                <div class="video__title">
+                    <hr class="video__titleline">
+                    we do the design of any complexity
+                </div>
+                <div class="video__description">
+                    <hr class="video__textline">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ducimus facilis molestias nobis quaerat! Alias aspernatur, aut blanditiis culpa dicta doloremque fugiat iusto maiores officiis quos, repellendus rerum vero vitae.
+                </div>
+                <div class="video__button">
+                    <span class="video__play">
+                        <i class="ion-play"></i>
+                    </span>
+                    watch video
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="container">
+                <div class="about__floatingtext">about us</div>
+                <div class="about__letter">a</div>
+                <img src="images/aboutus.png" class="about__img">
+                <div class="about__content">
+                    <div class="about__title">about us
+                        <hr class="about__line">
+                    </div>
+                    <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum ipsa nesciunt nisi recusandae rem sint temporibus. Dolore, fugiat magnam?
+                        <hr class="about__preline">
+                    </div>
+                    <div class="about__btn">learn more
+                        <i class="ion-ios-arrow-thin-right"></i>
+                        <hr class="decor__underline">
+                    </div>
                 </div>
             </div>
         </div>
