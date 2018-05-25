@@ -1,28 +1,68 @@
+function lang() {
+    if (this.eng === true) {
+        return {
+            menu: 'menu',
+            home: 'home',
+            products: 'products',
+            about: 'about',
+            learn: 'learn more',
+            furniture: 'furniture',
+            decor: 'decor',
+            vids: [
+                {
+                    image: '/../images/vid1.png',
+                    desc: 'Innovative design'
+                },
+                {
+                    image: '/../images/vid2.png',
+                    desc: 'High-level Skills'
+                },
+                {
+                    image: '/../images/vid3.png',
+                    desc: 'Quality products'
+                }
+            ]
+        }
+    } else {
+        return {
+            menu: 'меню',
+            home: 'Главная',
+            products: 'Продукты',
+            about: 'О нас',
+            learn: 'Узнать больше',
+            furniture: 'Интерьер',
+            decor: 'Декор',
+            vids: [
+                {
+                    image: '/../images/vid1.png',
+                    desc: 'Инновационный дизайн'
+                },
+                {
+                    image: '/../images/vid2.png',
+                    desc: 'Лучшие профессионалы'
+                },
+                {
+                    image: '/../images/vid3.png',
+                    desc: 'Качественный продукт'
+                }
+            ]
+        }
+    }
+}
+
+function backs(i){
+
+}
+
 new Vue({
     el: '#app',
     data: {
-        slided:false,
-        eng: false,
-        content: function(){
-            if(this.eng === true){
-                return {
-                    menu: 'menu',
-                    home: 'home',
-                    products: 'products',
-                    about: 'about',
-                    learn: 'learn more',
-                    furniture: 'furniture'
-                }
-            }else{
-                return {
-                    menu: 'меню',
-                    home: 'Главная',
-                    products: 'Продукты',
-                    about: 'О нас',
-                    learn: 'Узнать больше',
-                    furniture: 'Интерьер'
-                }
-            }
+        slided: false,
+        eng: true,
+        content: lang,
+        images: {
+            furniture: 'images/furniture.png',
+            decor: 'images/decor.jpg'
         }
     },
     methods: {
@@ -37,7 +77,6 @@ new Vue({
                 item[0].style.opacity = 0.3;
                 this.slided = false;
             }
-
         }
     }
 });
