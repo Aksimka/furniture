@@ -20,45 +20,42 @@
                     <div class="layout"></div>
                 </div>
             </div>
-            <div class="container">
-                <div class="header-top">
-                    <div class="header-top__left">
-                        <div class="header-top__menuIcon">
-                            <i class="ion-navicon"></i>
-                        </div>
-                        <div class="header-top__menu">{{ this.content().menu }}</div>
+            <div class="header-top">
+                <div class="header-top__left">
+                    <div class="header-top__menuIcon">
+                        <i class="ion-navicon"></i>
                     </div>
-                    <div class="header-top__center">
-                        <div class="header-top__logo">w<span><hr>oo</span>der</div>
-                        <div class="header-top__nav">
-                            <div class="header-top__navItem" v-for="item in this.content().header_nav_items">{{ item }}</div>
-                        </div>
-                    </div>
-                    <div class="header-top__right">
-                        <i class="ion-ios-information-outline header-info"></i>
-                        <div class="header-top__language">en
-                            <i class="ion-android-arrow-dropdown"></i>
-                        </div>
+                    <div class="header-top__menu">{{ this.content().menu }}</div>
+                </div>
+                <div class="header-top__center">
+                    <div class="header-top__logo">w<span><hr>oo</span>der</div>
+                    <div class="header-top__nav">
+                        <div class="header-top__navItem" v-for="item in this.content().header_nav_items">{{ item }}</div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="header-content">
-                        <div class="header-content__left">
-                            <div class="header-content__undertitle">wooder</div>
-                        </div>
-                        <div class="header-content__center">
-                            <div class="header-content__title">wooder</div>
-                            <div class="header-content__btn">{{ this.content().learn }}
-                                <i class="ion-ios-arrow-thin-right learn"></i>
-                            </div>
-                        </div>
-                        <div class="header-content__right">
-                            <div class="header-content__floatingtext">furniture & decor</div>
-                        </div>
+                <div class="header-top__right">
+                    <i class="ion-ios-information-outline header-info"></i>
+                    <div class="header-top__language">en
+                        <i class="ion-android-arrow-dropdown"></i>
                     </div>
                 </div>
             </div>
-
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-content__left">
+                        <div class="header-content__undertitle">wooder</div>
+                    </div>
+                    <div class="header-content__center">
+                        <div class="header-content__title">wooder</div>
+                        <div class="header-content__btn">{{ this.content().learn }}
+                            <i class="ion-ios-arrow-thin-right learn"></i>
+                        </div>
+                    </div>
+                    <div class="header-content__right">
+                        <div class="header-content__floatingtext">furniture & decor</div>
+                    </div>
+                </div>
+            </div>
         </header>
         <div class="furniture">
             <div class="container">
@@ -82,16 +79,15 @@
         </div>
         <div class="decor">
             <div class="container">
-                <div class="decor__photo" :style='{ backgroundImage: `url(${this.images.decor})`}'>
+                <div class="decor__photo" :style='{ backgroundImage: `url(${this.images.decor})` }'>
                     <div class="decor__layout"></div>
                     <div class="decor__floatingtext">{{ this.content().decor }}</div>
                 </div>
-                <div class="decor__letter">d</div>
                 <div class="decor-content">
                     <div class="decor__title">{{ this.content().decor }}
                         <hr class="decor__line">
                     </div>
-                    <div class="decor__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore excepturi minima mollitia
+                    <div class="decor__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt explicabo necessitatibus nisi optio rem, rerum ullam vitae voluptate?
                         <hr class="decor__preline">
                     </div>
                     <div class="decor__btn">{{ this.content().learn }}
