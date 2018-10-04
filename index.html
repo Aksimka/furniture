@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/css/reset.css" rel="stylesheet">
     <link href="styles/css/ionicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="styles/css/style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <title>Interior</title>
 </head>
 <body>
@@ -30,9 +31,7 @@
                     <div class="header-top__center">
                         <div class="header-top__logo">w<span><hr>oo</span>der</div>
                         <div class="header-top__nav">
-                            <div class="header-top__home">{{ this.content().home }}</div>
-                            <div class="header-top__products">{{ this.content().products }}</div>
-                            <div class="header-top__about">{{ this.content().about }}</div>
+                            <div class="header-top__navItem" v-for="item in this.content().header_nav_items">{{ item }}</div>
                         </div>
                     </div>
                     <div class="header-top__right">
@@ -49,8 +48,7 @@
                         </div>
                         <div class="header-content__center">
                             <div class="header-content__title">wooder</div>
-                            <div class="header-content__btn" @mouseover="btnAni()" @mouseleave="btnAni()">{{ this.content().learn }}
-                                <svg id="learnmoreBtn"></svg>
+                            <div class="header-content__btn">{{ this.content().learn }}
                                 <i class="ion-ios-arrow-thin-right learn"></i>
                             </div>
                         </div>
@@ -114,11 +112,13 @@
                     <div class="quality-item" v-for="vid in this.content().vids">
                         <div class="quality__imgwrapper">
                             <div class="quality-item__img" :style="{ background: `url(${vid.image}) bottom no-repeat` }">
-                                <span class="quality-item__play">
-                                    <i class="ion-play"></i>
-                                </span>
-                            </div>
+                                <a href="https://www.youtube.com/watch?v=TauJLzZuVQY" class="quality-item__href">
+                                    <span class="quality-item__play">
+                                        <i class="ion-play"></i>
+                                     </span>
+                                </a>
 
+                            </div>
                         </div>
                         <hr class="quality-item__line">
                         <div class="quality-item__description">{{ vid.desc }}</div>
@@ -141,12 +141,12 @@
                     <hr class="video__textline">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ducimus facilis molestias nobis quaerat! Alias aspernatur, aut blanditiis culpa dicta doloremque fugiat iusto maiores officiis quos, repellendus rerum vero vitae.
                 </div>
-                <div class="video__button">
+                <a href="https://www.youtube.com/watch?v=TauJLzZuVQY" class="video__button">
                     <span class="video__play">
                         <i class="ion-play"></i>
                     </span>
                     watch video
-                </div>
+                </a>
             </div>
         </div>
         <div class="about">
@@ -169,8 +169,25 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+        <div class="layout"></div>
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__copyrights">(c)2018 WOODER</div>
+                <div class="footer__title">
+                    <div class="footer__logo">w<span><hr>oo</span>der</div>
+                </div>
+                <div class="footer__author">Designed by
+                    <a href="https://vk.com/id16830545">Safonov Maksim</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </body>
 <script src="js/vue.js"></script>
+<script src="js/lang.js"></script>
 <script src="js/main.js"></script>
 
 </html>
