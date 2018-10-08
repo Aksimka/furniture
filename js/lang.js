@@ -8,15 +8,15 @@ function lang() {
             decor: 'decor',
             vids: [
                 {
-                    image: 'images/vid1.png',
+                    image: '/images/vid1.png',
                     desc: 'Innovative design'
                 },
                 {
-                    image: 'images/vid2.png',
+                    image: '/images/vid2.png',
                     desc: 'High-level Skills'
                 },
                 {
-                    image: 'images/vid3.png',
+                    image: '/images/vid3.png',
                     desc: 'Quality products'
                 }
             ]
@@ -30,15 +30,15 @@ function lang() {
             decor: 'Декор',
             vids: [
                 {
-                    image: 'images/vid1.png',
+                    image: '/images/vid1.png',
                     desc: 'Инновационный дизайн'
                 },
                 {
-                    image: 'images/vid2.png',
+                    image: '/images/vid2.png',
                     desc: 'Лучшие профессионалы'
                 },
                 {
-                    image: 'images/vid3.png',
+                    image: '/images/vid3.png',
                     desc: 'Качественный продукт'
                 }
             ]
